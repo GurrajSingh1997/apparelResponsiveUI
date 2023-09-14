@@ -1,0 +1,207 @@
+:root{
+    --desaturated-red:hsl(0, 36%, 70%);
+    --soft-red:hsl(0, 93%, 68%);
+    --grayish-red:hsl(0, 6%, 24%);
+    font-size: 16px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background:linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+}
+
+header{
+    padding: 25px;
+}
+
+header img{
+    width: 100px;
+}
+
+[alt="herobanner"]{
+    width: 100vw; 
+    /* VW = stands for viewport= used so that height and width of image is set to which ever it is open */
+}
+
+.info{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 85%;
+}
+
+h1{
+    font-size: 2.8rem;   
+    text-transform: uppercase;
+    margin-top: 60px;
+    letter-spacing: 9px;
+    font-weight: 600;
+    color: var(--grayish-red);
+    margin-bottom: 20px;
+}
+
+h1>span{
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+
+p{
+    color: var(--desaturated-red);
+    line-height: 23px;
+    font-weight: 700;
+}
+
+input{
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 1.5px solid var(--desaturated-red);
+    width: 85%;
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: var(--desaturated-red);
+    opacity: 0.5;
+    font-family: inherit;
+    text-align: left;
+    font-size: 1rem;
+    text-align: left;
+    
+}
+
+.input-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-top: 20px;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background:linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    margin-left: -40px;
+    
+
+}
+
+[alt="herobannerdesktop" ]{
+    display: none;
+}
+
+[alt="brandlogowebsite"]{
+    display: none;
+}
+
+
+
+/* Most commonbreakpoints = 768 for mobile and tablet. 1100px for Laptop */
+
+@media (min-width: 768px){
+    .info{
+        max-width: 70%;
+    }
+    h1{
+        font-size: 4rem;
+        margin-top: 50px;
+    }
+    p{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 500px;
+        margin: auto 0;
+        
+    }
+    [alt="herobanner"]{
+        height: 400px;
+        object-fit: cover;
+    }
+    input{
+        padding: 20px 30px;
+    }
+    button{
+        width: 100px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        margin-left: -50px;
+        
+    }
+    
+}
+
+@media (min-width: 1000px){
+
+    body{
+        background-image: url(images/bg-pattern-desktop.svg);
+        
+    }
+    [alt="herobanner"]{
+        display: none;
+    }
+
+    [alt="herobannerdesktop"]{
+        display: block;
+        height: 100vh;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    header{
+        display: none;
+    }
+
+    [alt="brandlogowebsite"]{
+        display: block;
+        padding: 10px;
+        width: 200px;
+        margin-top: 75px;
+        margin-bottom: 50px;
+    }
+
+    .info{
+        max-width: 40%;
+        text-align: left;
+    }
+
+    h1{
+        font-size: 4.5rem;
+        letter-spacing: 11px;
+        line-height: 5rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+        max-width: 85%;
+        
+    }
+
+    .input-btn-wrapper{
+        max-width: 80%;
+    }
+
+    button{
+        padding-top: 20px;
+    }
+
+    
+}
+    
+
+
